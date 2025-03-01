@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>chessGame</title>
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>chessGame</h1>
+    </header>
+
+    <main>
+        <div>
+            <table>
+                <tr>
+                    <td id="a8" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-rook" id="blackQueensideRook" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="b8" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-knight" id="blackQueensideKnight" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="c8" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-bishop" id="blackQueensideBishop" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="d8" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-queen" id="blackQueen" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="e8" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-king" id="blackKing" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="f8" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-bishop" id="blackKingsideBishop" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="g8" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-knight" id="blackKingsideKnight" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="h8" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-rook" id="blackKingsideRook" ondragstart="drag(event)"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="a7" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-pawn" id="blackPawnA" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="b7" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-pawn" id="blackPawnB" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="c7" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-pawn" id="blackPawnC" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="d7" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-pawn" id="blackPawnD" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="e7" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-pawn" id="blackPawnE" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="f7" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-pawn" id="blackPawnF" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="g7" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-pawn" id="blackPawnG" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="h7" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-solid fa-chess-pawn" id="blackPawnH" ondragstart="drag(event)"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="a6" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="b6" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="c6" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="d6" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="e6" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="f6" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="g6" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="h6" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                </tr>
+                <tr>
+                    <td id="a5" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="b5" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="c5" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="d5" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="e5" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="f5" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="g5" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="h5" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                </tr>
+                <tr>
+                    <td id="a4" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="b4" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="c4" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="d4" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="e4" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="f4" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="g4" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="h4" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                </tr>
+                <tr>
+                    <td id="a3" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="b3" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="c3" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="d3" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="e3" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="f3" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="g3" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                    <td id="h3" class="light" ondragover="allowDrop(event)" ondrop="drop(event)"></td>
+                </tr>
+                <tr>
+                    <td id="a2" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-pawn" id="whitePawnA" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="b2" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-pawn" id="whitePawnB" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="c2" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-pawn" id="whitePawnC" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="d2" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-pawn" id="whitePawnD" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="e2" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-pawn" id="whitePawnE" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="f2" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-pawn" id="whitePawnF" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="g2" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-pawn" id="whitePawnG" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="h2" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-pawn" id="whitePawnH" ondragstart="drag(event)"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="a1" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-rook" id="whiteQueensideRook" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="b1" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-knight" id="whiteQueensideKnight" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="c1" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-bishop" id="whiteQueensideBishop" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="d1" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-queen" id="whiteQueen" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="e1" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-king" id="whiteKing" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="f1" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-bishop" id="whiteKingsideBishop" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="g1" class="dark" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-knight" id="whiteKingsideKnight" ondragstart="drag(event)"></i>
+                    </td>
+                    <td id="h1" class="light" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <i class="fa-regular fa-chess-rook" id="whiteKingsideRook" ondragstart="drag(event)"></i>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <div id="buttons">
+                <button onclick="startOfGame()">Play as White</button>
+                <button onclick="startAsBlack()">Play as Black</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>Made by Niall Caplis</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
