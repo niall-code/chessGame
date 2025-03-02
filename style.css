@@ -39,8 +39,9 @@ i {
 }
 
 button {
-    margin: 20px;
-    padding: 5px;
+    margin: 25px;
+    padding: 10px;
+    font-weight: bold;
 }
 
 footer {
